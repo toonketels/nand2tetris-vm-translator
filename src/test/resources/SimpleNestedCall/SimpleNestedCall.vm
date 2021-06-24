@@ -1,0 +1,23 @@
+push constant 4
+push constant 2
+call SimpleNestedCall.addTwice 2
+label FOREVER
+goto FOREVER
+
+// Add 2 numbers
+function SimpleNestedCall.add 0
+push argument 0
+push argument 1
+add
+return
+
+// double 2 numbers added
+function SimpleNestedCall.addTwice 0
+push argument 0
+push argument 1
+call SimpleNestedCall.add 2
+push argument 0
+push argument 1
+call SimpleNestedCall.add 2
+call SimpleNestedCall.add 2
+return

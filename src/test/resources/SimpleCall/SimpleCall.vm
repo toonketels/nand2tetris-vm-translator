@@ -1,0 +1,12 @@
+push constant 4
+push constant 2
+call SimpleCall.add 2
+label FOREVER
+goto FOREVER
+
+// Add 2 numbers
+function SimpleCall.add 0
+push argument 0
+push argument 1
+add
+return

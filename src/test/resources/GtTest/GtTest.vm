@@ -1,0 +1,9 @@
+push constant 10
+push constant 10
+gt
+push constant 10
+push constant 9
+gt
+push constant 9
+push constant 10
+gt

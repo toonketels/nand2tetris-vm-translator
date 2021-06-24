@@ -1,0 +1,14 @@
+push constant 4
+push constant 2
+call DoubleCall.add 2
+push constant 3
+call DoubleCall.add 2
+label FOREVER
+goto FOREVER
+
+// Add 2 numbers
+function DoubleCall.add 0
+push argument 0
+push argument 1
+add
+return
